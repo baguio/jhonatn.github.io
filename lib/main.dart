@@ -82,7 +82,7 @@ class MyHeaderBox extends StatelessWidget {
             child: FittedBox(
               fit: BoxFit.fitWidth,
               alignment: Alignment.topLeft,
-              child: Image(image: AssetImage('iphone11_cam.jpg'),),
+              child: Image(image: AssetImage('assets/iphone11_cam.jpg'),),
             ),
           ),
         ],
