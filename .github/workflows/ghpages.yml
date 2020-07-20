@@ -1,4 +1,4 @@
-name: Build and Deploy a Flutter website on GitHub Pages
+name: Deploy on GitHub Pages
 
 on:
   push:
