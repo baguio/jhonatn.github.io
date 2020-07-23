@@ -33,7 +33,6 @@ class MyHomePage extends StatelessWidget {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const TextStyle titleFont = TextStyle(
-  fontFamily: 'Roboto',
   fontSize: 78,
   color: Color.fromRGBO(29, 29, 64, 1),
   fontWeight: FontWeight.w900,
@@ -42,7 +41,6 @@ const TextStyle titleFont = TextStyle(
 );
 
 const TextStyle messageFont = TextStyle(
-  fontFamily: 'Roboto',
   fontSize: 21,
   color: Color.fromRGBO(140, 140, 140, 1),
   fontWeight: FontWeight.w900,
