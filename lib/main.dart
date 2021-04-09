@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:fluttertest/window_sized_box.dart';
 import 'package:fluttertest/sided_row.dart';
