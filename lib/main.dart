@@ -16,15 +16,15 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
+  MyHomePage({Key? key, this.title}) : super(key: key);
+  final String? title;
   
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       backgroundColor: CupertinoColors.white,
       child: SingleChildScrollView(
-        child: MyHeaderBox(),
+        child: StartBox(),
       ),
     );
   }
@@ -49,39 +49,38 @@ const TextStyle messageFont = TextStyle(
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-class MyHeaderBox extends StatelessWidget {
+class StartBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return HeaderBox(
-      child: Flex(
-        direction: Axis.vertical,
-        mainAxisAlignment: MainAxisAlignment.start,
+    return WindowSizedBox(
+      child: Column(
         children: [
-          PartialHeaderBox(
+          SidedRow(
             alignment: Alignment.centerLeft,
             child: Padding(
               padding: EdgeInsets.fromLTRB(40, 70, 0, 40),
               child: AutoSizeText.rich(
                 TextSpan(
-                  style: messageFont,
-                  text: "",
                   children: [
                     TextSpan(text: "Jhonatan Avalos", style: titleFont),
-                    TextSpan(text: "\n"),
-                    TextSpan(text: "Software developer. Mainly mobile stuff"),
+                    TextSpan(text: "\nSoftware developer. Mainly mobile stuff", style: messageFont),
                   ],
                 ),
                 minFontSize: 10,
               ),
             ),
           ),
-          PartialHeaderBox(
+          SidedRow(
             alignment: Alignment.bottomRight,
-            child: FittedBox(
-              fit: BoxFit.fitWidth,
+            child: OverflowBox(
               alignment: Alignment.topLeft,
-              child: Image(image: AssetImage('assets/iphone11_cam.jpg'),),
-            ),
+              maxHeight: double.infinity,
+              child: Image(
+                image: AssetImage(
+                  'assets/iphone11_cam.jpg'
+                ),
+              ),
+            )
           ),
         ],
       ),
