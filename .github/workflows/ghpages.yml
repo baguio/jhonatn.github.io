@@ -28,4 +28,4 @@ jobs:
           publish_branch: master
           publish_dir: build/web
           allow_empty_commit: true
-          cname: xn--io-po72arj.ml
+          cname: jhona.tn
