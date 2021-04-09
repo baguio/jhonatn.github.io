@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:fluttertest/window_sized_box.dart';
+import 'package:fluttertest/sided_row.dart';
 
 void main() {
   runApp(MyApp());
