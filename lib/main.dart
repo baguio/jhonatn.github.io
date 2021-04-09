@@ -36,17 +36,17 @@ class MyHomePage extends StatelessWidget {
 
 const TextStyle titleFont = TextStyle(
   fontSize: 78,
-  color: Color.fromRGBO(29, 29, 64, 1),
-  fontWeight: FontWeight.w900,
-  letterSpacing: 2.4,
+  color: Color.fromRGBO(29, 29, 31, 1),
+  fontWeight: FontWeight.w600,
+  letterSpacing: -0.002,
   height: 1.05,
 );
 
 const TextStyle messageFont = TextStyle(
   fontSize: 21,
-  color: Color.fromRGBO(140, 140, 140, 1),
-  fontWeight: FontWeight.w900,
-  letterSpacing: 0.8,
+  color: Color.fromRGBO(134, 134, 139, 1),
+  fontWeight: FontWeight.w400,
+  letterSpacing: -0.022,
 );
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
