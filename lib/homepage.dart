@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const TextStyle titleFont = TextStyle(
-  fontSize: 78,
+  fontSize: 68,
   color: Color.fromRGBO(29, 29, 31, 1),
   fontWeight: FontWeight.w600,
   letterSpacing: -0.002,
@@ -30,7 +30,7 @@ const TextStyle titleFont = TextStyle(
 );
 
 const TextStyle messageFont = TextStyle(
-  fontSize: 21,
+  fontSize: 18,
   color: Color.fromRGBO(134, 134, 139, 1),
   fontWeight: FontWeight.w400,
   letterSpacing: -0.022,
