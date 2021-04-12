@@ -16,15 +16,24 @@
 
   <title>Jhonatan A.</title>
   <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+  <div class="spinnerHolder">
+    <svg class="pulse centered" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <g transform="scale(.25)">
+        <path transform="matrix(.13333 0 0 -.13333 0 256)" d="m480 1654c-83-70-181-237-219-374-45-164-50-413-10-568 57-224 226-373 503-444 113-29 299-29 412 0 214 55 375 166 453 312 107 200 104 587-6 830-53 116-176 270-216 270-57 0-119-119-192-366-2-8-22-7-72 2-86 17-247 17-341 0-52-9-75-9-77-2-55 188-109 312-150 344-36 28-47 28-85-4zm633-539c72-34 138-99 174-173 25-51 28-68 28-157 0-91-3-105-30-158-108-215-392-268-568-107-30 28-65 73-82 107-27 53-30 67-30 158 0 89 3 106 28 157 47 97 140 173 241 199 60 16 178 3 239-26z"/>
+        <path transform="matrix(.13333 0 0 -.13333 0 256)" d="m857 1076c-81-30-131-77-178-166-32-62-32-174 0-246 26-59 87-123 151-156 65-33 195-33 260 0 61 32 116 87 148 147 22 42 26 63 26 130s-4 88-27 132c-33 63-83 115-140 145-53 27-183 35-240 14zm133-291v-225h-30-30v225 225h30 30v-225z"/>
+      </g>
+    </svg>
+  </div>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=433420544');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=2987885314');
       });
     }
   </script>
