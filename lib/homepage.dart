@@ -60,10 +60,9 @@ class StartBox extends StatelessWidget {
             ),
           ),
           SidedRow(
-            alignment: Alignment.bottomRight,
-            child: OverflowBox(
-              alignment: Alignment.topLeft,
-              maxHeight: double.infinity,
+            alignment: Alignment.centerRight,
+            child: Container(
+              alignment: Alignment.bottomRight,
               child: Image(
                 image: AssetImage(
                   'assets/iphone11_cam.jpg'
