@@ -68,7 +68,7 @@ class StartBox extends StatelessWidget {
                   'assets/iphone11_cam.jpg'
                 ),
               ),
-            )
+            ),
           ),
         ],
       ),
