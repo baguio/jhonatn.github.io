@@ -60,19 +60,33 @@ class StartBox extends StatelessWidget {
               ),
             ),
           ),
-          SidedRow(
-            alignment: Alignment.centerRight,
-            child: Container(
-              alignment: Alignment.bottomRight,
-              child: Image(
-                image: AssetImage(
-                  'assets/iphone11_cam.jpg'
-                ),
-              ),
-            ),
+          Expanded(
+            child: Row(
+              children: [
+                _emptyFlexSpace(flex: 25),
+                _phoneImage(flex: 75),
+              ]
+            )
           ),
         ],
       ),
     );
   }
+
+  Widget _phoneImage({required int flex}) => Expanded(
+    flex: flex,
+    child: Container(
+      alignment: Alignment.bottomRight,
+      child: Image(
+        image: AssetImage(
+          'assets/iphone11_cam.jpg'
+        ),
+      ),
+    ),
+  );
+
+  Widget _emptyFlexSpace({required int flex}) => Expanded(
+    flex: flex,
+    child: SizedBox.shrink(),
+  );
 }
