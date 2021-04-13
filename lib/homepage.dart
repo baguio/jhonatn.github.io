@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:site/web_cupertino_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:ionicons/ionicons.dart';
 
@@ -86,25 +87,29 @@ class StartBox extends StatelessWidget {
         direction: Axis.vertical,
         alignment: WrapAlignment.end,
         children: [
-          CupertinoButton(
+          WebCupertinoButton(
             child: Icon(Ionicons.logo_linkedin),
             padding: padding,
+            tooltipMessage: "Linkedin",
             onPressed: () => launch("https://www.linkedin.com/in/jhonatanavalosg/")
           ),
-          CupertinoButton(
+          WebCupertinoButton(
             child: Icon(Ionicons.logo_github),
             padding: padding,
+            tooltipMessage: "Github",
             onPressed: () => launch("https://github.com/baguio/")
           ),
-          CupertinoButton(
+          WebCupertinoButton(
             child: Icon(Ionicons.mail_open),
             padding: padding,
+            tooltipMessage: "Email",
             onPressed: () => launch("mailto:me@jhona.tn"),
           ),
-          CupertinoButton(
+          WebCupertinoButton(
             child: Icon(Ionicons.code_slash),
             padding: padding,
-            onPressed: () => launch("https://github.com/baguio/baguio.github.io/")
+            tooltipMessage: "This site's source code",
+            onPressed: () => launch("https://github.com/baguio/baguio.github.io/"),
           ),
         ],
       )
