@@ -46,6 +46,7 @@ class StartBox extends StatelessWidget {
         children: [
           SidedRow(
             alignment: Alignment.centerLeft,
+            widthFactor: 0.8,
             child: Padding(
               padding: EdgeInsets.fromLTRB(40, 70, 0, 40),
               child: AutoSizeText.rich(

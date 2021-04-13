@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class SidedRow extends StatelessWidget {
   final Alignment alignment;
   final Widget child;
-  const SidedRow({Key? key, required this.alignment, required this.child}) : super(key: key);
+  final double widthFactor;
+  const SidedRow({Key? key, required this.alignment, required this.widthFactor, required this.child}) : super(key: key);
     
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class SidedRow extends StatelessWidget {
       child: Container(
         alignment: alignment,
         child: FractionallySizedBox(
-          widthFactor: 0.75,
+          widthFactor: widthFactor,
           child: child,
         ),
       ),
