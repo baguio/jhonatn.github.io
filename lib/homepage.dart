@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const TextStyle _titleFont = TextStyle(
-  fontSize: 68,
+  fontSize: 58,
   color: Color.fromRGBO(29, 29, 31, 1),
   fontWeight: FontWeight.w600,
   letterSpacing: -0.002,
