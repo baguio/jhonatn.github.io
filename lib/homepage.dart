@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:ionicons/ionicons.dart';
+
 import 'package:site/sided_row.dart';
 import 'package:site/window_sized_box.dart';
 
@@ -63,6 +66,7 @@ class StartBox extends StatelessWidget {
           Expanded(
             child: Row(
               children: [
+                _linkBar(),
                 _emptyFlexSpace(flex: 25),
                 _phoneImage(flex: 75),
               ]
@@ -70,6 +74,40 @@ class StartBox extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  Widget _linkBar() {
+    final padding = EdgeInsets.all(15);
+    return Container(
+      padding: EdgeInsets.only(left: 25, bottom: 25),
+      height: double.maxFinite,
+      child: Wrap(
+        direction: Axis.vertical,
+        alignment: WrapAlignment.end,
+        children: [
+          CupertinoButton(
+            child: Icon(Ionicons.logo_linkedin),
+            padding: padding,
+            onPressed: () => launch("https://www.linkedin.com/in/jhonatanavalosg/")
+          ),
+          CupertinoButton(
+            child: Icon(Ionicons.logo_github),
+            padding: padding,
+            onPressed: () => launch("https://github.com/baguio/")
+          ),
+          CupertinoButton(
+            child: Icon(Ionicons.mail_open),
+            padding: padding,
+            onPressed: () => launch("mailto:me@jhona.tn"),
+          ),
+          CupertinoButton(
+            child: Icon(Ionicons.code_slash),
+            padding: padding,
+            onPressed: () => launch("https://github.com/baguio/baguio.github.io/")
+          ),
+        ],
+      )
     );
   }
 
