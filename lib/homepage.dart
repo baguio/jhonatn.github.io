@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const TextStyle titleFont = TextStyle(
+const TextStyle _titleFont = TextStyle(
   fontSize: 68,
   color: Color.fromRGBO(29, 29, 31, 1),
   fontWeight: FontWeight.w600,
@@ -29,7 +29,7 @@ const TextStyle titleFont = TextStyle(
   height: 1.05,
 );
 
-const TextStyle messageFont = TextStyle(
+const TextStyle _messageFont = TextStyle(
   fontSize: 18,
   color: Color.fromRGBO(134, 134, 139, 1),
   fontWeight: FontWeight.w400,
@@ -52,8 +52,8 @@ class StartBox extends StatelessWidget {
               child: AutoSizeText.rich(
                 TextSpan(
                   children: [
-                    TextSpan(text: "Jhonatan Avalos", style: titleFont),
-                    TextSpan(text: "\nSoftware developer. Mainly mobile stuff", style: messageFont),
+                    TextSpan(text: "Jhonatan Avalos", style: _titleFont),
+                    TextSpan(text: "\nSoftware developer. Mainly mobile stuff", style: _messageFont),
                   ],
                 ),
                 minFontSize: 10,
