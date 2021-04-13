@@ -70,8 +70,8 @@ class StartBox extends StatelessWidget {
                 _linkBar(),
                 _emptyFlexSpace(flex: 25),
                 _phoneImage(flex: 75),
-              ]
-            )
+              ],
+            ),
           ),
         ],
       ),
