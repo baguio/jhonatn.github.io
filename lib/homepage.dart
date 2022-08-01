@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:site/on_appear_fadein.dart';
 import 'package:site/web_cupertino_button.dart';

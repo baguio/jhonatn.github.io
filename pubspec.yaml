@@ -23,8 +23,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  auto_size_text: ^2.1.0
-  url_launcher: ^6.0.3
+  auto_size_text: ^3.0.0
+  url_launcher: ^6.1.5
   ionicons: ^0.1.2
 
 

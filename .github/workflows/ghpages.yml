@@ -19,7 +19,7 @@ jobs:
       - name: Build
         run: |
           flutter pub get
-          flutter build web --no-sound-null-safety
+          flutter build web
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
