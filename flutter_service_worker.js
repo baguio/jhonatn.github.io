@@ -3,29 +3,33 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "main.dart.js": "391817a31438eb90f27376eaffadfec6",
-"favicon.png": "149eb0af0192831012829921b90180f0",
-"index.html": "7f36063149facf9564e0debdc9add26b",
-"/": "7f36063149facf9564e0debdc9add26b",
-"version.json": "cecb292e181a64573f5cf756104f1d7f",
+  "favicon.png": "149eb0af0192831012829921b90180f0",
+"version.json": "7eccba52b18e7cd68db87edb1ef477bb",
+"main.dart.js": "3607f50f6b3a0ae4d29370e13f197285",
+"icons/Icon_192.png": "4c7912501de9e3b6e03d895989877257",
+"icons/Icon_512.png": "5e962203fb492a6204a23e6877c11a28",
 "manifest.json": "d594fada8b3d808dc09cd79ad8b844cb",
 "styles.css": "3e155db404889735b93551ded90fa6b0",
-"assets/packages/ionicons/fonts/Ionicons.ttf": "0cdf2a324d5c21f08c7f446476aa2ee3",
-"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
+"flutter.js": "eb2682e33f25cd8f1fc59011497c35f8",
+"index.html": "b222dcb0b65330a4a9da9b191b73904c",
+"/": "b222dcb0b65330a4a9da9b191b73904c",
+"assets/NOTICES": "750b0f725f28d9998d15ce7bcffd0b48",
 "assets/FontManifest.json": "3ca64090b9da4a7c0a3988ea3cda93fc",
-"assets/NOTICES": "5c2f7f5f68664a0f027c0c9150190c62",
+"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
+"assets/packages/ionicons/fonts/Ionicons.ttf": "0cdf2a324d5c21f08c7f446476aa2ee3",
 "assets/assets/iphone11_cam.jpg": "7649bba29a8c2a26ea84a92ee0b09d17",
+"assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
 "assets/AssetManifest.json": "ba180924695ab52372d30c41883f04c2",
-"assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
-"icons/Icon_192.png": "4c7912501de9e3b6e03d895989877257",
-"icons/Icon_512.png": "5e962203fb492a6204a23e6877c11a28"
+"canvaskit/canvaskit.wasm": "4b83d89d9fecbea8ca46f2f760c5a9ba",
+"canvaskit/profiling/canvaskit.wasm": "95e736ab31147d1b2c7b25f11d4c32cd",
+"canvaskit/profiling/canvaskit.js": "ae2949af4efc61d28a4a80fffa1db900",
+"canvaskit/canvaskit.js": "c2b4e5f3d7a3d82aed024e7249a78487"
 };
 
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = [
-  "/",
-"main.dart.js",
+  "main.dart.js",
 "index.html",
 "assets/NOTICES",
 "assets/AssetManifest.json",
@@ -36,7 +40,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
+        CORE.map((value) => new Request(value, {'cache': 'reload'})));
     })
   );
 });
