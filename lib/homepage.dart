@@ -101,7 +101,7 @@ class StartBox extends StatelessWidget {
             child: Icon(Ionicons.logo_github),
             padding: padding,
             tooltipMessage: "Github",
-            onPressed: () => launch("https://github.com/baguio/")
+            onPressed: () => launch("https://github.com/jhonatn/")
           ),
           WebCupertinoButton(
             child: Icon(Ionicons.mail_open),
@@ -113,7 +113,7 @@ class StartBox extends StatelessWidget {
             child: Icon(Ionicons.code_slash),
             padding: padding,
             tooltipMessage: "This site's source code",
-            onPressed: () => launch("https://github.com/baguio/baguio.github.io/"),
+            onPressed: () => launch("https://github.com/jhonatn/jhonatn.github.io/"),
           ),
         ],
       )

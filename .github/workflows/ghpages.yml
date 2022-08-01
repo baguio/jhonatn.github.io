@@ -3,7 +3,7 @@ name: Deploy on GitHub Pages
 on:
   push:
     branches:
-      - master_prebuild
+      - main_prebuild
 
 jobs:
   build-deploy:
@@ -25,7 +25,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: master
+          publish_branch: main
           publish_dir: build/web
           allow_empty_commit: true
           cname: jhona.tn
