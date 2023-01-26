@@ -2,6 +2,12 @@
 <html>
 <head>
 <link rel='redirect_uri' href='chayay://auth'>
-<meta http-equiv="refresh" content="0; url='chayay://auth'" />
+<script>
+function redirectToChayay() {
+  let queryParams = new URLSearchParams(window.location.search);
+  window.location.replace("chayay://auth?" + queryParams);
+}
+window.onload = redirectToChayay
+</script>
 </head>
 </html>
