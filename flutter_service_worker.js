@@ -8,8 +8,8 @@ const RESOURCES = {
 "canvaskit/profiling/canvaskit.js": "c21852696bc1cc82e8894d851c01921a",
 "canvaskit/profiling/canvaskit.wasm": "371bc4e204443b0d5e774d64a046eb99",
 "canvaskit/canvaskit.wasm": "3de12d898ec208a5f31362cc00f09b9e",
-"index.html": "63b6d8ac5b65ffb880243963889bfd06",
-"/": "63b6d8ac5b65ffb880243963889bfd06",
+"index.html": "52ec464d0875c74c1b9e4a7563b85390",
+"/": "b05bc9d715364f5100bf9aa94562d00f",
 "flutter.js": "1cfe996e845b3a8a33f57607e8b09ee4",
 "manifest.json": "d594fada8b3d808dc09cd79ad8b844cb",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
@@ -22,6 +22,7 @@ const RESOURCES = {
 "icons/Icon_192.png": "4c7912501de9e3b6e03d895989877257",
 "icons/Icon_512.png": "5e962203fb492a6204a23e6877c11a28",
 "styles.css": "3e155db404889735b93551ded90fa6b0",
+"chayay/auth/index.html": "b05bc9d715364f5100bf9aa94562d00f",
 "main.dart.js": "b3b6ad873d14e5655a3254aeb62cdc44",
 "favicon.png": "149eb0af0192831012829921b90180f0",
 "version.json": "7eccba52b18e7cd68db87edb1ef477bb"
