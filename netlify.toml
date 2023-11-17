@@ -1,4 +1,4 @@
 [[redirects]]
-  from = "/webfinger"
+  from = "/.well-known/webfinger"
   to = "https://jhona.tn/webfinger-static/:resource.json"
   query = {resource = ":resource"}
