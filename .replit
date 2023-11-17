@@ -1,0 +1,6 @@
+entrypoint = "Sources/PublishHome/main.swift"
+
+run = "set -e; swift run; cd Output; python -m http.server"
+
+[nix]
+channel = "stable-22_11"
