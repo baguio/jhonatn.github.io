@@ -1,4 +1,7 @@
+[build]
+  functions = "Functions/"
+
 [[redirects]]
   from = "/.well-known/webfinger"
-  to = "https://jhona.tn/webfinger-static/:resource.json"
+  to = "/.netlify/functions/webfinger"
   query = {resource = ":resource"}
