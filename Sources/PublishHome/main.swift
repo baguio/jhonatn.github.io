@@ -81,28 +81,78 @@ extension Theme {
             context: PublishingContext<Site>
         ) throws -> HTML {
             HTML(head: [
-                .viewport(.accordingToDevice, fit: .cover),
+                .meta(.charset(.utf8)),
+                .viewport(.accordingToDevice, initialScale: 1),
                 .style("""
-                    body { margin:0px;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,sans-serif,system-ui; }
-                    a { color:rgb(0,122,255); }
-                    ion-icon { font-size: 24pt;margin:4pt 0; }
-                    """
-                ),
+                    body {
+                        margin: 0;
+                        padding: 0;
+                        overflow-x: hidden;
+                    }
+                    
+                    .container {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    
+                    .left, .right {
+                        flex: 1;
+                        box-sizing: border-box;
+                        padding: 24pt;
+                    }
+                    
+                    .left {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #f0f0f0;
+                    }
+                    
+                    .left img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+                    
+                    .right {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+                    
+                    .content * {
+                        margin: 24pt 0;
+                    }
+                    
+                    .content h1 {
+                        font-size: 2em;
+                    }
+                    
+                    @media screen and (orientation: landscape) {
+                        .container {
+                            flex-direction: row;
+                        }
+                        .left {
+                            flex: 1;
+                            min-height: 100vh;
+                        }
+                        .right {
+                            flex: 1;
+                            min-height: 100vh;
+                        }
+                    }
+                """)
             ]) {
                 Div {
-                    if let imagePath = page.imagePath?.string {
-                        Div {
-                            Image(imagePath)
-                                .style("position:absolute;top:50%;left:25%;transform:translateY(50%),translateX(50%);")
-                        }
-                        .style("height:100%;flex:50%;background-color:red;")
-                    }
                     Div {
-                        H1(page.title)
-                    }
-                    .style("height:100%;flex:50%;background-color:green;")
-                }
-                .style("height:100%;width:100%;display:flex;")
+                        if let imagePath = page.imagePath {
+                            Image(imagePath.string)
+                        }
+                    }.class("left")
+                    Div {
+                        Div(page.content.body)
+                            .class("content")
+                    }.class("right")
+                }.class("container")
             }
         }
     }
