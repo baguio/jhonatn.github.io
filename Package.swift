@@ -2,8 +2,19 @@
 
 import PackageDescription
 
+let supportedPlatforms: [SupportedPlatform]? = {
+    #if os(macOS)
+    [
+        .macOS(.v12)
+    ]
+    #else
+    nil
+    #endif
+}()
+
 let package = Package(
     name: "PublishHome",
+    platforms: supportedPlatforms,
     products: [
         .executable(
             name: "PublishHome",
