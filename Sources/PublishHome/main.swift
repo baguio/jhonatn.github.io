@@ -68,7 +68,7 @@ extension Theme {
                         }
                         .style("flex:25%;float:left;margin:32pt;display: grid;align-content:end;")
                         Div ()
-                        .style("flex:75%;float:right;background:url(iphonecam.jpg) bottom right no-repeat;background-size:contain;")
+                        .style("flex:75%;float:right;background:url(/iphonecam.jpg) bottom right no-repeat;background-size:contain;")
                     }
                     .style("height:50dvh;display:flex;")
                 }
