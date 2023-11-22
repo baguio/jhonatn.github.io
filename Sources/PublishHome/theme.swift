@@ -77,6 +77,14 @@ struct JhonatnHTMLFactory<Site: Website>: HTMLFactory {
                     font-family: \(fontFamily);
                 }
                 
+                h1 {
+                    font-size: 2em;
+                }
+                
+                p {
+                    text-align: justify;
+                }
+                
                 .container {
                     display: flex;
                     flex-direction: column;
@@ -85,55 +93,50 @@ struct JhonatnHTMLFactory<Site: Website>: HTMLFactory {
                 .left, .right {
                     flex: 1;
                     box-sizing: border-box;
-                    padding: 24pt;
-                }
-                
-                .left {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                }
+                
+                .left {
                     background-color: #f0f0f0;
                 }
                 
-                .left img {
-                    max-width: 100%;
-                    height: auto;
+                .right {
+                    flex-direction: column;
                 }
                 
-                .right {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
+                .content {
+                    max-width: 300pt;
+                    height: auto;
+                    margin: 24pt;
                 }
                 
                 .content * {
                     margin: 24pt 0;
-                }
-                
-                .content h1 {
-                    font-size: 2em;
+                    width: 100%;
                 }
                 
                 @media screen and (orientation: landscape) {
                     .container {
                         flex-direction: row;
                     }
-                    .left {
-                        flex: 1;
-                        min-height: 100vh;
-                    }
-                    .right {
+                    .left, .right {
                         flex: 1;
                         min-height: 100vh;
                     }
                 }
-            """)
+            """),
+            .ionIconModule,
+            .ionIconNoModule,
         ]) {
             Div {
                 Div {
-                    if let imagePath = page.imagePath {
-                        Image(imagePath.string)
-                    }
+                    Div {
+                        if let imagePath = page.imagePath {
+                            Image(imagePath.string)
+                        }
+                    }.class("content")
                 }.class("left")
                 Div {
                     Div(page.content.body)
