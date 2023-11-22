@@ -29,20 +29,3 @@ extension HTMLFactory {
         context: PublishingContext<Site>
     ) throws -> HTML? { nil }
 }
-
-struct IonIcon: Component {
-    let name: String
-
-    init(_ name: String) {
-        self.name = name
-    }
-
-    public var body: Component {
-        Node<HTML.BodyContext>.element(
-            named: "ion-icon", 
-            nodes: [
-                .attribute(named: "name", value: name)
-            ]
-        )
-    }
-}

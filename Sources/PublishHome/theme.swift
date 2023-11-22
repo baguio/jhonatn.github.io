@@ -23,14 +23,8 @@ struct JhonatnHTMLFactory<Site: Website>: HTMLFactory {
                 ion-icon { font-size:24pt; margin:4pt 0; }
                 """
             ),
-            .script(
-                .attribute(named: "type", value: "module"),
-                .src("https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js")
-            ),
-            .script(
-                .attribute(named: "nomodule"),
-                .src("https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js")
-            ),
+            .ionIconModule,
+            .ionIconNoModule,
         ]) {
             Div {
                 Div {
