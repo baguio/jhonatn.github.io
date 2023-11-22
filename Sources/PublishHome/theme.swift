@@ -9,6 +9,8 @@ import Publish
 import Plot
 
 struct JhonatnHTMLFactory<Site: Website>: HTMLFactory {
+    private let fontFamily = "-apple-system,BlinkMacSystemFont,sans-serif,system-ui"
+    
     func makeIndexHTML(
         for index: Index,
         context: PublishingContext<Site>
@@ -16,7 +18,7 @@ struct JhonatnHTMLFactory<Site: Website>: HTMLFactory {
         HTML(head: [
             .viewport(.accordingToDevice, fit: .cover),
             .style("""
-                body { margin:0px;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,sans-serif,system-ui; }
+                body { margin:0px; overflow:hidden; font-family:\(fontFamily); }
                 a { color:rgb(0,122,255); }
                 ion-icon { font-size: 24pt;margin:4pt 0; }
                 """
@@ -78,6 +80,7 @@ struct JhonatnHTMLFactory<Site: Website>: HTMLFactory {
                     margin: 0;
                     padding: 0;
                     overflow-x: hidden;
+                    font-family: \(fontFamily);
                 }
                 
                 .container {
