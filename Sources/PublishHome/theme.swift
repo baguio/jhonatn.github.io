@@ -20,7 +20,7 @@ struct JhonatnHTMLFactory<Site: Website>: HTMLFactory {
             .style("""
                 body { margin:0px; overflow:hidden; font-family:\(fontFamily); }
                 a { color:rgb(0,122,255); }
-                ion-icon { font-size: 24pt;margin:4pt 0; }
+                ion-icon { font-size:24pt; margin:4pt 0; }
                 """
             ),
             .script(
@@ -38,14 +38,14 @@ struct JhonatnHTMLFactory<Site: Website>: HTMLFactory {
                         Span {
                             Text("Jhonatan Avalos")
                                 .addLineBreak()
-                        }.style("font-size:3em;font-weight:600;color:rgb(29,29,31);")
+                        }.style("font-size:3em; font-weight:600; color:rgb(29,29,31);")
                         Span {
                             Text("Software developer. Mainly mobile stuff")
-                        }.style("font-size:1em;font-weight:400;color:rgb(134,134,139);")
+                        }.style("font-size:1em; font-weight:400; color:rgb(134,134,139);")
                     }
-                    .style("width:80%;float:left;position:absolute;top:25%;transform:translateY(-50%);")
+                    .style("width:80%; float:left; position:absolute; top:25%; transform:translateY(-50%);")
                 }
-                .style("height:50dvh;margin:0 32pt;")
+                .style("height:50dvh; margin:0 32pt;")
                 Div {
                     Div {
                         Link(url: "https://www.linkedin.com/in/jhonatanavalosg/") {
@@ -58,11 +58,11 @@ struct JhonatnHTMLFactory<Site: Website>: HTMLFactory {
                             IonIcon("code-slash")
                         }
                     }
-                    .style("flex:25%;float:left;margin:32pt;display: grid;align-content:end;")
+                    .style("flex:25%; float:left; margin:32pt; display: grid; align-content:end;")
                     Div ()
-                    .style("flex:75%;float:right;background:url(/iphonecam.jpg) bottom right no-repeat;background-size:contain;")
+                    .style("flex:75%; float:right; background:url(/iphonecam.jpg) bottom right no-repeat; background-size:contain;")
                 }
-                .style("height:50dvh;display:flex;")
+                .style("height:50dvh; display:flex;")
             }
             .style("width:100%;")
         }
