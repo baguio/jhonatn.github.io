@@ -120,8 +120,16 @@ struct JhonatnHTMLFactory<Site: Website>: HTMLFactory {
                     margin: 24pt 0;
                     width: 100%;
                 }
-                            
-                ion-icon {
+                
+                footer * {
+                    margin: auto 8pt;
+                }
+                
+                a {
+                    vertical-align: middle;
+                }
+                
+                footer {
                     font-size: 24pt;
                     margin-bottom: 16pt;
                 }
@@ -152,6 +160,9 @@ struct JhonatnHTMLFactory<Site: Website>: HTMLFactory {
                     Div(page.content.body)
                         .class("content")
                     Footer {
+                        Link(url: "") {
+                            Image("/cta_macappstore.svg")
+                        }
                         Link(url: "https://mastodon.social/@jhonatn/") {
                             IonIcon("logo-mastodon")
                         }
