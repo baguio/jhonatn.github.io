@@ -106,6 +106,10 @@ struct JhonatnHTMLFactory<Site: Website>: HTMLFactory {
                     flex-direction: column;
                 }
                 
+                header, footer {
+                    margin-top: auto;
+                }
+                
                 .content {
                     max-width: 300pt;
                     height: auto;
@@ -115,6 +119,11 @@ struct JhonatnHTMLFactory<Site: Website>: HTMLFactory {
                 .content * {
                     margin: 24pt 0;
                     width: 100%;
+                }
+                            
+                ion-icon {
+                    font-size: 24pt;
+                    margin-bottom: 16pt;
                 }
                 
                 @media screen and (orientation: landscape) {
@@ -139,8 +148,14 @@ struct JhonatnHTMLFactory<Site: Website>: HTMLFactory {
                     }.class("content")
                 }.class("left")
                 Div {
+                    Header()
                     Div(page.content.body)
                         .class("content")
+                    Footer {
+                        Link(url: "https://mastodon.social/@jhonatn/") {
+                            IonIcon("logo-mastodon")
+                        }
+                    }
                 }.class("right")
             }.class("container")
         }
