@@ -5,6 +5,9 @@ import Plot
 struct JhonatnSite: Website {
     typealias SectionID = NoSectionID
     struct ItemMetadata: WebsiteItemMetadata {}
+    struct PageMetadata: WebsitePageMetadata {
+        let isProduct: Bool?
+    }
 
     var url = URL(string: "https://jhona.tn")!
     var name = "Jhonatn"

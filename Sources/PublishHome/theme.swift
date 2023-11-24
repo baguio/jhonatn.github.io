@@ -8,7 +8,8 @@
 import Publish
 import Plot
 
-struct JhonatnHTMLFactory<Site: Website>: HTMLFactory {
+struct JhonatnHTMLFactory: HTMLFactory {
+    typealias Site = JhonatnSite
     private let fontFamily = "-apple-system,BlinkMacSystemFont,sans-serif,system-ui"
     
     func makeIndexHTML(
@@ -147,24 +148,31 @@ struct JhonatnHTMLFactory<Site: Website>: HTMLFactory {
             .ionIconModule,
             .ionIconNoModule,
         ]) {
-            Div {
-                Div {
+            let isProduct = page.metadata.isProduct ?? false
+            return Div {
+                if isProduct {
                     Div {
-                        if let imagePath = page.imagePath {
-                            Image(imagePath.string)
-                        }
-                    }.class("content")
-                }.class("left")
+                        Div {
+                            if let imagePath = page.imagePath {
+                                Image(imagePath.string)
+                            }
+                        }.class("content")
+                    }.class("left")
+                }
                 Div {
-                    Header()
+                    if isProduct {
+                        Header()
+                    }
                     Div(page.content.body)
                         .class("content")
-                    Footer {
-                        Link(url: "") {
-                            Image("/cta_macappstore.svg")
-                        }
-                        Link(url: "https://mastodon.social/@jhonatn/") {
-                            IonIcon("logo-mastodon")
+                    if isProduct {
+                        Footer {
+                            Link(url: "") {
+                                Image("/cta_macappstore.svg")
+                            }
+                            Link(url: "https://mastodon.social/@jhonatn/") {
+                                IonIcon("logo-mastodon")
+                            }
                         }
                     }
                 }.class("right")
