@@ -63,7 +63,7 @@ struct JhonatnHTMLFactory<Site: Website>: HTMLFactory {
     }
 
     func makePageHTML(
-        for page: Page,
+        for page: Page<Site>,
         context: PublishingContext<Site>
     ) throws -> HTML {
         HTML(head: [
