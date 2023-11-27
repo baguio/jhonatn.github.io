@@ -6,7 +6,7 @@ struct JhonatnSite: Website {
     typealias SectionID = NoSectionID
     struct ItemMetadata: WebsiteItemMetadata {}
     struct PageMetadata: WebsitePageMetadata {
-        let isProduct: Bool?
+        let productDownloadLink: URL?
     }
 
     var url = URL(string: "https://jhona.tn")!

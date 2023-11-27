@@ -148,9 +148,9 @@ struct JhonatnHTMLFactory: HTMLFactory {
             .ionIconModule,
             .ionIconNoModule,
         ]) {
-            let isProduct = page.metadata.isProduct ?? false
+            let downloadLink = page.metadata.productDownloadLink
             return Div {
-                if isProduct {
+                if downloadLink != nil {
                     Div {
                         Div {
                             if let imagePath = page.imagePath {
@@ -160,14 +160,14 @@ struct JhonatnHTMLFactory: HTMLFactory {
                     }.class("left")
                 }
                 Div {
-                    if isProduct {
+                    if downloadLink != nil {
                         Header()
                     }
                     Div(page.content.body)
                         .class("content")
-                    if isProduct {
+                    if let downloadLink {
                         Footer {
-                            Link(url: "") {
+                            Link(url: downloadLink) {
                                 Image("/cta_macappstore.svg")
                             }
                             Link(url: "https://mastodon.social/@jhonatn/") {

@@ -1,6 +1,5 @@
 ---
 image: /nazca/nazca.png
-isProduct: true
 productDownloadLink: https://apps.apple.com/app/notifier-for-xcode/id6463956526
 ---
 # Notifier for Xcode
