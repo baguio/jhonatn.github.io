@@ -165,7 +165,7 @@ struct JhonatnHTMLFactory: HTMLFactory {
                     }
                     Div(page.content.body)
                         .class("content")
-                    if let downloadLink {
+                    if let downloadLink = downloadLink {
                         Footer {
                             Link(url: downloadLink) {
                                 Image("/cta_macappstore.svg")
